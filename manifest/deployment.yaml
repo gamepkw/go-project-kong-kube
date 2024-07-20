@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: go-project-kong
+        app: go-project-kong-app
     spec:
       containers:
         - name: go-project-kong-pod
