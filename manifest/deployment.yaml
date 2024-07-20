@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-project-kong-deployment
+  namespace: go-project-kong-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-project-kong-app
+  template:
+    metadata:
+      labels:
+        app: go-project-kong
+    spec:
+      containers:
+        - name: go-project-kong-pod
+          image: docker.io/gamepkw/go-project-kong-image:latest
+          ports:
+            - containerPort: 80
