@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: go-project-kong-app
+    app: go-project-kong
   ports:
     - protocol: TCP
       port: 80
